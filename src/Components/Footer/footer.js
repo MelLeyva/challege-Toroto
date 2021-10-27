@@ -8,7 +8,8 @@ import './footer.scss'
 
 function Footer() {
     return (
-        <div className='footer'>
+        <footer>
+            <span className='social-media'>
             <a href='https://www.facebook.com/holatoroto'>
                 <img src={fbIcon} className="fb-logo" alt="logo" />
             </a>
@@ -20,11 +21,12 @@ function Footer() {
             </a> 
             <a href='https://www.instagram.com/holatoroto/'>
                 <img src={igIcon} className="ig-logo" alt="logo" />
-            </a> 
+            </a>
+            </span>
             <ul>
             <img src={logo} className="logo" alt="logo" />
             </ul>
-        </div>
+        </footer>
     )
 }
 

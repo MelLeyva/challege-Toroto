@@ -1,36 +1,10 @@
 @import '../../Variables-scss/Variables.scss';
 
-.navbar {
-    position: fixed;
+.links {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    height: 56px;
-    //width: 100%;
-    padding: 0px 200px 0px 200px;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    background-color: $azul-toroto;
-    
-    ul {
-        padding: 0px;
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-    
-    button{
-        position: static;
-        width: 114px;
-        height: 32px;
-        top: 0px;
-        background-color: $blanco-toroto;
-        border-radius: 10px;
-        border-style: none;
-        color: $negro_toroto;
-    }
-}
-.navbar {
     color: $blanco-toroto;
     font-family: $fontbody;
     font-size: 14px;
@@ -38,6 +12,23 @@
     line-height: 16px;
     letter-spacing: 1.25px;
     text-align: center;
+    
+ ul {
+    padding: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+ button{
+    position: static;
+    width: 114px;
+    height: 32px;
+    top: 0px;
+    background-color: $blanco-toroto;
+    border-radius: 10px;
+    border-style: none;
+    color: $negro_toroto;
+}
 }
 
 .App-logo{
@@ -45,7 +36,7 @@
     right: 0.21%;
     top: 31.03%;
     bottom: 30.62%;
-    margin-right: 200px; 
+    margin-right: 300px; 
 }
 
 .meta{

@@ -1,18 +1,4 @@
-@import '../../Variables-scss/Variables.scss';
-
-.footer{
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 200px 0px 200px;
-    position: absolute;
-    height: 112px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background-color: $azul-toroto;
-
+.social-media{
     a {
         padding: 0px;
         margin-left: 20px;
@@ -23,6 +9,5 @@
 .logo{
     padding: 0px;
     height: 90px;
-    margin-left: 470px;
 }
 

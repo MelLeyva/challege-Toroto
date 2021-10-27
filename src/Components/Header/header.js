@@ -5,10 +5,13 @@ import "./header.scss";
 
 function NavBar() {
   return (
+    <header>
     <div className="navbar">
       <a href="/home">
         <img src={logo} className="App-logo" alt="logo" />
       </a>
+    </div>
+    <span className="links">
       <ul className="projects">PROYECTOS</ul>
       <ul className="about">SOBRE TOROTO</ul>
       <ul className="blog">BLOG</ul>
@@ -17,7 +20,8 @@ function NavBar() {
         META REGISTRO
       </ul>
       <button href="/contact">CONTACTO</button>
-    </div>
+    </span>
+    </header>
   );
 }
 
