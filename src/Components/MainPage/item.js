@@ -7,7 +7,7 @@ import serviceIcon from "../../icons/svg/service_icon.svg";
 import "./item.scss";
 
 function Item({ project }) {
-  console.log(project);
+  //console.log(project);
   const idProject = project.id
   return (
     <div>

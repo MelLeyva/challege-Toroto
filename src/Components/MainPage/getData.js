@@ -2,13 +2,15 @@ import React, { useEffect, useState } from "react";
 import Item from "./item";
 import "./item.scss";
 
+
 function GetData() {
   let [projects, setProjects] = useState();
   let getApi = async () => {
     let url = `https://fieldops-api.toroto.mx/api/projects/`;
     let getFetchData = await fetch(url).then((resul) => resul.json());
-    //console.log(getFetchData)
+    // console.log(getFetchData)
     setProjects(getFetchData);
+    
   };
   useEffect(() => {
     getApi();
@@ -23,6 +25,7 @@ function GetData() {
         )}
       </section>
     </div>
+    
   );
 }
 
