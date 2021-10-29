@@ -1,3 +1,5 @@
+@import '../../Variables-scss/Variables.scss';
+
 
 .map-container {
     //position: absolute;
@@ -7,4 +9,24 @@
     top: 0px;
     z-index: 1;
 
+}
+
+.popup .mapboxgl-popup-content{
+    border-radius: 20px;
+    
+    span{
+        background-image: url("../../img/img_project_1.png");
+        height: 127px;
+        object-fit: cover;
+        left: 0px;
+        top: 0px;
+        border-radius: 20px 20px 0px 0px;
+    }
+    
+    p{
+        font-size: 14px;
+    }
+    h1{
+        font-family: $fontbody;
+    }
 }
