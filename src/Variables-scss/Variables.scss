@@ -1,0 +1,54 @@
+//colors
+$azul-toroto:  rgba(26, 48, 219, 1);
+$blanco-toroto:  rgba(255, 255, 255, 1);
+$negro_toroto: rgba(55, 55, 55, 1);
+//tag
+@mixin tag {
+    display: flex;
+    text-align: initial;
+    align-items: center;
+    width: 128px;
+    height: 40px;
+    border: 1px solid $negro_toroto;
+    margin-right: 6px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    color: $negro_toroto;
+    overflow:hidden;
+    list-style:none;
+}
+@mixin button-project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 448px;
+    height: 48px;
+    padding: 16px 24px;
+    margin: 32px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: $negro_toroto;
+    background: none;
+    border: 1px solid $negro_toroto;
+    box-sizing: border-box;
+    border-radius: 5px;  
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+$fontbody: 'Roboto';

@@ -1,0 +1,37 @@
+@import '../../Variables-scss/Variables.scss';
+
+
+.map-container {
+    /* position: absolute; */
+    height: 748px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+    width: 100vw;
+}
+
+.custom-marker{
+    height: 36px;
+    width: 36px;
+}
+
+.popup .mapboxgl-popup-content{
+    border-radius: 20px;
+    
+    img{
+        width: 423px;
+        height: 127px;
+        object-fit: cover;
+        left: 0px;
+        top: 0px;
+        border-radius: 20px 20px 0px 0px;
+    }
+    
+    p{
+        font-size: 14px;
+    }
+    h1{
+        font-family: $fontbody;
+    }
+}
