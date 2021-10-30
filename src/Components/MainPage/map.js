@@ -125,14 +125,12 @@ function Mapp() {
       const popup = new mapboxgl.Popup({
         closeButton: false,
         closeOnClick: false,
-        //closeOnMove: true,
         className: "popup",
         maxWidth: "423px",
         anchor: "center",
         maxZoom: 15,
         minZoom: 4,
-        offset: 7,
-        //focusAfterOpen: false,
+        
       });
 
       // Change the cursor to a pointer when
@@ -140,11 +138,20 @@ function Mapp() {
       //map.current.scrollZoom.disable();
       map.current.on("mouseenter", "project-polygon", (e) => {
         map.current.getCanvas().style.cursor = "pointer";
+        const coordinates = e.features[0].geometry.coordinates[0][0].slice();
+        console.log(coordinates)
+        const description = e.features[0].properties.description;
+
+         while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        } 
+
+        popup.setLngLat(coordinates).setHTML(description).addTo(map.current)
         //e.preventDefault()
-        popup
+        /* popup
           .setLngLat(e.lngLat)
           .setHTML(e.features[0].properties.description)
-          .addTo(map.current);
+          .addTo(map.current); */
       });
 
       // Change the cursor back to a pointer
