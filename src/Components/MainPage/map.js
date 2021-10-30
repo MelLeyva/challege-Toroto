@@ -2,6 +2,8 @@
 import mapboxgl from "!mapbox-gl";
 import React, { useRef, useEffect, useState } from "react";
 import "./map.scss";
+import circle from "../../img/circle.png";
+
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoibWVsaXNzYTA3OTUiLCJhIjoiY2t2OXprOWVqYTgzeDJ3bnp4dmtzaG42byJ9.qakXOSV44SVXrge9AjoSiw";
@@ -11,7 +13,7 @@ function Mapp() {
   const map = useRef(null);
   const [lng, setLng] = useState(-106.408);
   const [lat, setLat] = useState(23.2267);
-  const [zoom, setZoom] = useState(4.7);
+  const [zoom, setZoom] = useState(4.6);
 
 
   useEffect(() => {
@@ -23,8 +25,9 @@ function Mapp() {
       zoom: zoom,
     });
 
-    //map.current.scrollZoom.disable();
+    map.current.scrollZoom.disable();
     map.current.on("load", () => {
+  
       map.current.addSource("project-polygon", {
         type: "geojson",
         data: {
@@ -110,15 +113,16 @@ function Mapp() {
         },
       });
 
-      // Add a new layer to visualize the polygon.
-      map.current.addLayer({
-        id: "project-polygon",
-        type: "circle",
-        source: "project-polygon", // reference the data source
-        layout: {},
-        paint: {
-          "circle-radius": 17,
-          "circle-color": "#373737",
+      map.current.loadImage(circle, (error, image) => {
+        if (error) throw error;
+        map.current.addImage('custom-marker', image);
+      });
+        map.current.addLayer({
+        'id': "point",
+        'type': 'symbol',
+        'source': 'project-polygon',
+        'layout': {
+          'icon-image': 'custom-marker',
         },
       });
 
@@ -127,72 +131,21 @@ function Mapp() {
         closeOnClick: false,
         className: "popup",
         maxWidth: "423px",
-        anchor: "center",
-        maxZoom: 15,
-        minZoom: 4,
-        
+        anchor: "right",
       });
 
-      // Change the cursor to a pointer when
-      // the mouse is over the states layer.
-      //map.current.scrollZoom.disable();
-      map.current.on("mouseenter", "project-polygon", (e) => {
-        map.current.getCanvas().style.cursor = "pointer";
-        const coordinates = e.features[0].geometry.coordinates[0][0].slice();
-        console.log(coordinates)
-        const description = e.features[0].properties.description;
-
-         while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        } 
-
-        popup.setLngLat(coordinates).setHTML(description).addTo(map.current)
-        //e.preventDefault()
-        /* popup
+      map.current.on("mouseover", "point", (e) => {
+        map.current.getCanvas().style.cursor = "";
+          popup
           .setLngLat(e.lngLat)
           .setHTML(e.features[0].properties.description)
-          .addTo(map.current); */
+          .addTo(map.current);
       });
 
-      // Change the cursor back to a pointer
-      // when it leaves the states layer.
-      map.current.on("mouseleave", "project-polygon", (e) => {
+      map.current.on("mouseleave", "point", () => {
         map.current.getCanvas().style.cursor = "";
         popup.remove();
       });
-      /* const popup = new mapboxgl.Popup({
-        closeButton: false,
-        closeOnClick: false,
-        className: "popup",
-        maxWidth: "423px",
-        anchor: "center",
-        focusAfterOpen: false,
-      });
-
-      map.current.on("mouseenter", "project-polygon", (e) => {
-        // Change the cursor style as a UI indicator.
-        map.current.getCanvas().style.cursor = "pointer";
-
-        // Copy coordinates array.
-        const coordinates = e.features[0].geometry.coordinates.slice();
-        const description = e.features[0].properties.description;
-
-        // Ensure that if the map is zoomed out such that multiple
-        // copies of the feature are visible, the popup appears
-        // over the copy being pointed to.
-        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        }
-
-        // Populate the popup and set its coordinates
-        // based on the feature found.
-        popup.setLngLat(coordinates).setHTML(description).addTo(map.current);
-      });
-
-      map.current.on("mouseleave", "project-polygon", () => {
-        map.current.getCanvas().style.cursor = "";
-        //popup.remove();
-      }); */
     });
   });
 
