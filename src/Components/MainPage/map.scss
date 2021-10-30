@@ -9,7 +9,11 @@
     top: 0px;
     z-index: 1;
     width: 100vw;
+}
 
+.custom-marker{
+    height: 36px;
+    width: 36px;
 }
 
 .popup .mapboxgl-popup-content{

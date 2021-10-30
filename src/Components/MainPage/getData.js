@@ -17,7 +17,7 @@ function GetData() {
   }, []);
 
   return (
-    <div>
+    <div className='grid-projects'>
       <h1 className='all-projects'>Todos los proyectos</h1>
       <section className="container">    
         {projects && projects.data.map((project) => 
