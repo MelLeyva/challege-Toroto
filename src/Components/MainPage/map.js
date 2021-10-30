@@ -91,7 +91,7 @@ function Mapp() {
               type: "Feature",
               properties: {
                 description:
-                  "<span></span><h6>CDMX, México</h6><h1>Broxel</h1><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>",
+                  "<img src='../../img/img_project_1.png'/><h6>CDMX, México</h6><h1>Broxel</h1><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>",
               },
               geometry: {
                 type: "Polygon",
@@ -123,6 +123,7 @@ function Mapp() {
       });
 
       const popup = new mapboxgl.Popup({
+        
         closeButton: false,
         closeOnClick: false,
         //closeOnMove: true,
@@ -199,10 +200,9 @@ function Mapp() {
   });
 
   return (
-    <div>
+  
       <div ref={mapContainer} className="map-container"></div>
-    </div>
-  );
+   );
 }
 
 export default Mapp;

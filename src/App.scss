@@ -2,6 +2,7 @@
 
  .App{
     padding-top: 40px;
+
  }
  header{
     position: fixed;
@@ -16,6 +17,7 @@
     top: 0px;
     background-color: $azul-toroto;
     z-index: 2;
+    width: 100vw;
     
  }
  footer{
@@ -30,4 +32,5 @@
     right: 0px;
     margin-top: 94px;
     background-color: #1a30db;
+    width: 100vw;
  }

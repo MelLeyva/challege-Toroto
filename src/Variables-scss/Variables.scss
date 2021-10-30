@@ -43,6 +43,12 @@ $negro_toroto: rgba(55, 55, 55, 1);
     border-radius: 5px;  
 }
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 $fontbody: 'Roboto';

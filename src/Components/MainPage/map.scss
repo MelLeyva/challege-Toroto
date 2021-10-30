@@ -2,20 +2,21 @@
 
 
 .map-container {
-    //position: absolute;
+    /* position: absolute; */
     height: 748px;
     left: 0px;
     right: 0px;
     top: 0px;
     z-index: 1;
+    width: 100vw;
 
 }
 
 .popup .mapboxgl-popup-content{
     border-radius: 20px;
     
-    span{
-        background-image: url("../../img/img_project_1.png");
+    img{
+        width: 423px;
         height: 127px;
         object-fit: cover;
         left: 0px;
