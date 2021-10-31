@@ -2,7 +2,7 @@
 import mapboxgl from "!mapbox-gl";
 import React, { useRef, useEffect, useState } from "react";
 import "./map.scss";
-import circle from "../../img/circle.png";
+import Circle from "../../img/circle.png";
 import Popup from './popup';
 import ReactDOM from "react-dom";
 
@@ -136,7 +136,7 @@ function Mapp() {
         },
       });
 
-      map.current.loadImage(circle, (error, image) => {
+      map.current.loadImage(Circle, (error, image) => {
         if (error) throw error;
         map.current.addImage("custom-marker", image);
       });

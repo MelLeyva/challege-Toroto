@@ -5,6 +5,7 @@ import P003 from "../../img/img_project_3.png"
 import P004 from "../../img/img_project_4.png"
 import serviceIcon from "../../icons/svg/service_icon.svg";
 import "./item.scss";
+import { Link } from "react-router-dom";
 
 function Item({ project }) {
   //console.log(project);
@@ -48,7 +49,11 @@ function Item({ project }) {
               <img src={serviceIcon} className="tag" alt="tag" />
               Servicio X </li>
             </span>
-            <button className='view-project'>VER PROYECTO COMPLETO</button>
+            <div className='view-project'  key={project.id}>
+              <Link to={`/project/${project.id}`}>
+                VER PROYECTO COMPLETO
+              </Link>
+            </div>
           </section>
      )}
     </div>

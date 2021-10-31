@@ -1,22 +1,33 @@
-import './App.scss';
-import NavBar from './Components/Header/header';
-import GetData from './Components/MainPage/getData';
-import Footer from './Components/Footer/footer';
-import Mapp from './Components/MainPage/map'
+import "./App.scss";
+import NavBar from "./Components/Header/header.js";
+import GetData from "./Components/MainPage/getData.js";
+import Footer from "./Components/Footer/footer.js";
+import Mapp from "./Components/MainPage/map.js";
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Project from "./Components/CurrentProject/currentProject.js";
+//import Project from "./Components/CurrentProject/currentProject";
 
 function App() {
-   return (
-    <div className="App">
-        <NavBar/> 
-      <main>
-        <Mapp/>
-        <GetData/>
-      </main>
-        <Footer/>   
-    </div>
+  return (
+    <Router>
+      <div className="App">
+        <NavBar />
+        <main>
+          <Switch>
+            <Route path="/project/:id">
+              <Project />
+            </Route>
+            <Route path="/">
+              <Mapp />
+              <GetData />
+            </Route>
+          </Switch>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
-
 
 export default App;
