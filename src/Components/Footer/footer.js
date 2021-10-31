@@ -4,7 +4,7 @@ import inIcon from '../../icons/svg/linkedin_icon.svg'
 import igIcon from '../../icons/svg/instagram_icon.svg'
 import twtIcon from '../../icons/svg/twitter_icon.svg'
 import React from "react";
-import './footer.scss'
+import './Footer.scss'
 
 function Footer() {
     return (

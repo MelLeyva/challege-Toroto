@@ -1,8 +1,8 @@
 import './App.scss';
-import NavBar from './Components/Header/header';
-import GetData from './Components/MainPage/getData';
-import Footer from './Components/Footer/footer';
-import Mapp from './Components/MainPage/map'
+import NavBar from './Components/Header/Header';
+import GetData from './Components/MainPage/GetData';
+import Footer from './Components/Footer/Footer';
+import Mapp from './Components/MainPage/Map'
 import React from "react";
 
 function App() {

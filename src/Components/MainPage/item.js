@@ -4,7 +4,7 @@ import P002 from "../../img/img_project_2.png"
 import P003 from "../../img/img_project_3.png"
 import P004 from "../../img/img_project_4.png"
 import serviceIcon from "../../icons/svg/service_icon.svg";
-import "./item.scss";
+import "./Item.scss";
 
 function Item({ project }) {
   //console.log(project);

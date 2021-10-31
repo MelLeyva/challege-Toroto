@@ -1,7 +1,7 @@
 import logo from "../../icons/svg/logo.svg";
 import extrLink from "../../icons/svg/external-link.svg";
 import React from "react";
-import "./header.scss";
+import "./Header.scss";
 
 function NavBar() {
   return (

@@ -1,9 +1,9 @@
 // eslint-disable-next-line import/no-webpack-loader-syntax
 import mapboxgl from "!mapbox-gl";
 import React, { useRef, useEffect, useState } from "react";
-import "./map.scss";
+import "./Map.scss";
 import circle from "../../img/circle.png";
-import Popup from './popup';
+import Popup from './Popup';
 import ReactDOM from "react-dom";
 
 mapboxgl.accessToken =
