@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Item from "./Item";
+import Item from "./Item.jsx";
 import "./Item.scss";
 
 
