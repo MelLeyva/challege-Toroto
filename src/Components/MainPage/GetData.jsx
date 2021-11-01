@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Item from "./item";
-import "./item.scss";
+import Item from "./Item.jsx";
+import "./Item.scss";
 
 
 function GetData() {
