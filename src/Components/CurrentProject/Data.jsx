@@ -6,6 +6,7 @@ import Images from "./Images.jsx";
 import Photo from "./Photo.jsx";
 import Services from "./Services.jsx";
 import Impacts from "./Impact.jsx";
+import WorksMap from "./WorksMap.jsx";
 
 const Project = () => {
     const { id } = useParams();
@@ -37,18 +38,19 @@ const Project = () => {
         
         //console.log(proyecto[0].activities)
         return (
-          <div>
+          <div className='grid'>
             <Photo id={proyecto[0].id}/>
             <Information
               location={proyecto[0].location}
               name={proyecto[0].name}
-              problem={proyecto[0].problem}
-            />,
+              />
               {proyecto[0].services && proyecto[0].services.map((service, index) => 
               <Services service={service}  key={index} />)}
+              {proyecto[0].description}
               {proyecto[0].activities && proyecto[0].activities.map((activity) => 
                 <Activities name={activity.name} description={activity.description} key={activity.name} />
                 )}
+              <WorksMap/>
               {proyecto[0].images && proyecto[0].images.map((image, index) => 
               <Images url={image}  key={index} />
               )}

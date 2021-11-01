@@ -2,18 +2,17 @@ import React from "react";
 
 const Information = ({
   name,
-  problem,
   location,
 
 }) => {
   return (
-    <div>
-      <h5 className="location">{location}</h5>
-      <h1 className="name">{name}</h1>
-      <p className="problem">{problem}</p>
+    <div className='info'>
+      <h5 className="loc-project">{location}</h5>
+      <h1 className="name-project">{name}</h1>
      </div>
   );
 };
+// <p className="problem">{problem}</p>
 
 export default Information;
 

@@ -5,24 +5,24 @@ import P003 from "../../img/img_project_3.png"
 import P004 from "../../img/img_project_4.png"
 
 const Photo = ({ id }) => (
-    <div className="photo">
+    <div>
       {id === "P001" ? (
-        <img src={P001} className="photo" alt="paisaje" />
+        <img src={P001} className="photo-id" alt="paisaje" />
       ) : (
         console.log("")
       )}
       {id === "P002" ? (
-        <img src={P002} className="photo" alt="paisaje" />
+        <img src={P002} className="photo-id" alt="paisaje" />
       ) : (
         console.log("")
       )}
       {id === "P003" ? (
-        <img src={P003} className="photo" alt="paisaje" />
+        <img src={P003} className="photo-id" alt="paisaje" />
       ) : (
         console.log("")
       )}
       {id === "P004" ? (
-        <img src={P004} className="photo" alt="paisaje" />
+        <img src={P004} className="photo-id" alt="paisaje" />
       ) : (
         console.log("")
       )}

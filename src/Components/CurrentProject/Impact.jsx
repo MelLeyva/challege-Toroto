@@ -4,9 +4,9 @@ function Impacts(props) {
   //console.log(props.name);
   //console.log(props.description);
   return (
-    <div>
-        <p className='location'>{props.name}</p>
-      <p className='description'>{props.value}</p>
+    <div className='impact'>
+        <p className='imp-name'>{props.name}</p>
+      <p className='imp-descrip'>{props.value}</p>
     </div>
   );
 }

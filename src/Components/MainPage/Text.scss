@@ -1,0 +1,51 @@
+@import "../../Variables-scss/Variables.scss";
+
+.text {
+  position: absolute;
+  z-index: 2;
+  top: 232px;
+  left: 80px;
+
+    .weAre {
+    width: 336px;
+    height: 168px;
+    left: 0px;
+    top: 0px;
+    font-family: $fontbody;
+    color: $negro_toroto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+    }
+
+    .lorem {
+    width: 336px;
+    height: 120px;
+    margin-top: 16px;
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: #333333;
+    }
+
+    .propose {
+    text-align: center;
+    width: 336px;
+    height: 48px;
+    margin-top: 32px;
+    background: $negro_toroto;
+    border-radius: 5px;
+    color: $blanco-toroto;
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    border: none;
+    }
+}
