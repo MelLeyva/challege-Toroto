@@ -1,5 +1,5 @@
 import React from "react";
-import Photo from "../CurrentProject/Photo.jsx";
+import Photo from "./Photo.jsx";
 
 const Popup = ({ location, name, problem, id }) => (
   <div className="popUp">

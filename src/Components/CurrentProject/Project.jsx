@@ -8,7 +8,7 @@ const Information = ({
   return (
     <div className='info'>
       <h5 className="loc-project">{location}</h5>
-      <h1 className="name-project">{name}</h1>
+      <div className="name-project">{name}</div>
      </div>
   );
 };

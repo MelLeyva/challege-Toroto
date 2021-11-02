@@ -1,0 +1,234 @@
+@import "../../Variables-scss/Variables.scss";
+
+.conteiner {
+  // position: relative;
+  padding: 38px 180px 157px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  gap: 20px;
+}
+.resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  word-wrap: break-word;
+
+  .loc-project {
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    color: $gris_1;
+  }
+  .name-project {
+    font-family: $fontbody;
+    font-style: normal;
+    height: auto;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+    color: $gris_1;
+    overflow: hidden;
+    margin-top: 4px;
+  }
+
+  .services-project {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  .service {
+    @include tag();
+  }
+  .descrip-project {
+    height: 120px;
+    margin-top: 32px;
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: #6f6f6f;
+    text-align: initial;
+  }
+}
+
+.project-image {
+  height: 480px;
+  left: 528px;
+  .picture {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+}
+
+.problem-project {
+  margin-top: 84px;
+
+  h2 {
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.18px;
+    color: $gris_1;
+  }
+
+  p {
+    margin-top: 32px;
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: $gris_1;
+  }
+}
+.implement {
+  display: flex;
+  margin-top: 109px;
+  gap: 40px;
+
+  h2 {
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+    color: $negro_toroto;
+  }
+  .tool {
+    background: none;
+    border: none;
+  }
+}
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.459);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.is-open {
+  display: flex;
+}
+
+.modal-container {
+  position: relative;
+  min-width: 1084px;
+  min-height: 694px;
+  background-color: $blanco-toroto;
+  text-align: justify;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.title-act {
+  margin-top: 64px;
+  font-family: $fontbody;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+  color: $gris_1;
+}
+.activities {
+  margin-top: 32px;
+  
+}
+.name-activity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  .title {
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 100%;
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $gris_1;
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top-color:#6F6F6F;
+    text-align: initial;
+  }
+  .arrow {
+    height: 15px;
+  }
+}
+.descrip {
+  margin-top: 6px;
+  margin-bottom: 32px;
+  font-family: $fontbody;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: $gris_1;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(1,0,1,0);
+
+}
+
+.show{
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1,0,1,0);
+} 
+
+.grid-photos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 288px 288px;
+  gap: 16px;
+}
+
+.img-project {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.images:nth-child(1) {
+  grid-column-start: span 2;
+}
+
+.images:nth-child(6) {
+  grid-column-start: span 2;
+}

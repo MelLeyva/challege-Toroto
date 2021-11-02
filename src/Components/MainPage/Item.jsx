@@ -46,7 +46,8 @@ function Item({ project }) {
             <span className='service-card'>
               <li className='tag-one'> 
               <img src={serviceIcon} className="tag" alt="tag" />
-              Servicio X</li>
+              Servicio X
+              </li>
               <li className='tag-two'>
               <img src={serviceIcon} className="tag" alt="tag" />
               Servicio X </li>

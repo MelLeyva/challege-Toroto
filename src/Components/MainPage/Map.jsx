@@ -141,6 +141,8 @@ function Mapp() {
         if (error) throw error;
         map.current.addImage("custom-marker", image);
       });
+ 
+
       map.current.addLayer({
         id: "point",
         type: "symbol",
@@ -148,7 +150,6 @@ function Mapp() {
         layout: {
           "icon-image": "custom-marker",
         },
-        
       });
 
    
@@ -192,7 +193,7 @@ function Mapp() {
     });
   });
 
-  return <div ref={mapContainer} className="map-container"></div>;
+  return <div ref={mapContainer} className="map-container"></div>
 }
 
 export default Mapp;

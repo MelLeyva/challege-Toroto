@@ -1,5 +1,12 @@
 @import "../../Variables-scss/Variables.scss";
 
+/* .map-box{
+  display: flex;
+  height: 748px;
+  width: 80vw;
+  background-color: violet;
+} */
+
 .map-container {
   /* position: relative; */
   height: 748px;
@@ -7,7 +14,7 @@
   right: 0px;
   top: 0px;
   z-index: 1;
-  width: 100vw;
+  width: auto;
 }
 
 .custom-marker {
