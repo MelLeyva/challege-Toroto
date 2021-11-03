@@ -52,7 +52,7 @@ function Item({ project }) {
               <img src={serviceIcon} className="tag" alt="tag" />
               Servicio X </li>
             </span>
-              <Link to={`proyectos/${project.id}`}>
+              <Link className='link' to={`proyectos/${project.id} ` }>
             <button className='view-project' key={project.id}> 
                 VER PROYECTO COMPLETO
             </button>

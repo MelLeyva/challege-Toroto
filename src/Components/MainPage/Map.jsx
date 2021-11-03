@@ -21,7 +21,7 @@ function Mapp() {
       className: "popup",
       maxWidth: "423px",
       maxHeight: "355px",
-      anchor: "right",
+      anchor: "center",
     })
   );
   const map = useRef(null);
@@ -153,7 +153,7 @@ function Mapp() {
       });
 
    
-      map.current.on("click", (e) => {
+      map.current.on("mouseover", "point", (e) => {
         map.current.getCanvas().style.cursor = "";
         const features = map.current.queryRenderedFeatures(e.point, {
           layers: ["point"],

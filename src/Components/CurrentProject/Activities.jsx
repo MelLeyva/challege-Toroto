@@ -19,7 +19,7 @@ function Activities(props, index) {
       <div className='name-activity'>
         <button className='title' onClick={() => toggle(index)} key={index}>
           {props.name}
-          <img src={arrow} className="arrow" alt="tag" />
+          <img src={arrow} className={clicked === index ? 'arrow rotate' : 'arrow' } alt="tag" />
         </button>
       </div>
       <div className={clicked === index ? 'descrip show' : 'descrip' }>{props.description}</div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Photo from "./Photo.jsx";
+//import { Link } from "react-router-dom";
 
 const Popup = ({ location, name, problem, id }) => (
   <div className="popUp">

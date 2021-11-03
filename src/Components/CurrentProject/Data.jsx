@@ -7,10 +7,12 @@ import PhotoProject from "./Photo-project.jsx";
 import Services from "./Services.jsx";
 import Impacts from "./Impact.jsx";
 import WorksMap from "./WorksMap.jsx";
-import "./Styles-Project.scss"
 import toolTip from "../../icons/svg/tooltip_icon.svg"
 import Modal from "./ModalTool.jsx";
-import { useModal, /* Acordeon */ } from "./UseModal.jsx";
+import { useModal } from "./UseModal.jsx";
+import "./Styles-Project.scss"
+import ProposeProject from "./ProposeProjects.jsx";
+
 
 const Project = () => {
   const { id } = useParams();
@@ -68,25 +70,33 @@ const Project = () => {
         <p>{proyecto[0].problem}</p>
       </div>
       <div className='implement'>
-        <h2>Implementación</h2>
+        <h2 className='implement-title'>Implementación</h2>
         <button className='tool' onClick={openModal1}><img src={toolTip} className="tool-tip" alt="tool" /></button>
           <Modal isOpen={isOpenModal1} closeModal={closeModal1}></Modal>
       </div>
-      <h2  className='title-act' >Actividades de restauración</h2>
+      <div  className='title-act' >Actividades de restauración
       <div className='activities' >
       {proyecto[0].activities && proyecto[0].activities.map((activity, index) =>
         <Activities name={activity.name} description={activity.description} key={index} />
       )}
       </div>
+      </div>
       <WorksMap />
+      <div className='galery'>Galeria de imágenes
       <div className='grid-photos'>
         {proyecto[0].images && proyecto[0].images.map((image, index) =>
           <Images url={image} key={index} />
         )}
       </div>
+      </div>
+      <div className='impacts'>Impacto
+      <div className='impact'>
       {proyecto[0].impact && proyecto[0].impact.map((impact) =>
         <Impacts name={impact.name} value={impact.value} key={impact.name} />
       )}
+      </div>
+      <ProposeProject/>
+      </div>
     </div>
   );
 }
