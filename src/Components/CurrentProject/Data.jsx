@@ -72,31 +72,31 @@ const Project = () => {
       <div className='implement'>
         <h2 className='implement-title'>Implementación</h2>
         <button className='tool' onClick={openModal1}><img src={toolTip} className="tool-tip" alt="tool" /></button>
-          <Modal isOpen={isOpenModal1} closeModal={closeModal1}></Modal>
+        <Modal isOpen={isOpenModal1} closeModal={closeModal1}></Modal>
       </div>
-      <div  className='title-act' >Actividades de restauración
-      <div className='activities' >
-      {proyecto[0].activities && proyecto[0].activities.map((activity, index) =>
-        <Activities name={activity.name} description={activity.description} key={index} />
-      )}
-      </div>
+      <div className='title-act' >Actividades de restauración
+        <div className='activities' >
+          {proyecto[0].activities && proyecto[0].activities.map((activity, index) =>
+            <Activities name={activity.name} description={activity.description} key={index} />
+          )}
+        </div>
       </div>
       <WorksMap />
       <div className='galery'>Galeria de imágenes
-      <div className='grid-photos'>
-        {proyecto[0].images && proyecto[0].images.map((image, index) =>
-          <Images url={image} key={index} />
-        )}
-      </div>
+        <div className='grid-photos'>
+          {proyecto[0].images && proyecto[0].images.map((image, index) =>
+            <Images url={image} key={index} />
+          )}
+        </div>
       </div>
       <div className='impacts'>Impacto
-      <div className='impact'>
-      {proyecto[0].impact && proyecto[0].impact.map((impact) =>
-        <Impacts name={impact.name} value={impact.value} key={impact.name} />
-      )}
+        <div className='impact'>
+          {proyecto[0].impact && proyecto[0].impact.map((impact) =>
+            <Impacts name={impact.name} value={impact.value} key={impact.name} />
+          )}
+        </div>
       </div>
-      <ProposeProject/>
-      </div>
+        <ProposeProject />
     </div>
   );
 }
