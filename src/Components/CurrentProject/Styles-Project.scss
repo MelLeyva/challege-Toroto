@@ -584,21 +584,71 @@
     }
   }
 
-  .text2{
+  .text2 {
     margin: 0;
     text-align: center;
     padding: 16px;
 
-  .weAre2{
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 500;
+    .weAre2 {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 500;
+    }
+    .lorem2 {
+      @include subTittleMovil();
+    }
+    .btn-propose {
+      margin-top: 0;
+    }
   }
-  .lorem2{
-    @include subTittleMovil();
+  .modal-container {
+    width: 360px;
+    height: 594px;
+    align-items:center;
+
+    p{
+      font-size: 12px;
+      line-height: 14px;
+    }
+    h2{
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 500;
+      margin-top: 24px;
+    }
+    li{
+      @include subTittleMovil();
+    }
+    .buttons{
+      grid-template-columns: 100%;
+      button{
+        height: 48px;
+      }
+    }
+
   }
-  .btn-propose{
-    margin-top: 0;
+  .header-modal{
+    height: 20px;
   }
+  .modal-close{
+    filter: invert(14%) sepia(19%) saturate(0%) hue-rotate(221deg) brightness(104%) contrast(82%);
+  }
+  .close-modal {
+    display: block;
+  }
+  .activitiy-modal{
+    margin: 25px 40px 20px;
+  }
+  .modal-activity{
+    gap:15px;
+    h1{
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 500;
+      align-items: center;
+    }
+    .modal-tag{
+      height: 24px;
+    }
   }
 }

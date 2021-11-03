@@ -24,7 +24,6 @@ const Modal = ({ isOpen, closeModal }) => {
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quod.</li>
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nisi eaque atque odio?</li>
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quod.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nisi eaque atque odio?</li>
                 <span className='buttons'>
                     <button className='propose-project'>PROPONE UN PROYECTO</button>
                     <button className='see-projects'>VER LOS PROYECTOS</button>
