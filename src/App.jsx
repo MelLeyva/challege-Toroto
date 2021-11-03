@@ -7,6 +7,7 @@ import Text from "./Components/MainPage/ProposeText";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Project from "./Components/CurrentProject/Data.jsx";
+import GoDown from "./Components/MainPage/SeeProjects";
 // import DataProject from "./Components/CurrentProject/DataProjects";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             </Route>
             <Route path="/" exact> 
               <Text />
+              <GoDown />
               <Mapp />
               <GetData />
             </Route>
