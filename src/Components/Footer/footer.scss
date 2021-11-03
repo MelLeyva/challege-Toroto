@@ -1,13 +1,43 @@
-.social-media{
-    a {
-        padding: 0px;
-        margin-left: 20px;
-        margin-right: 20px; 
-     }
-    
-}
-.logo{
-    padding: 0px;
-    height: 90px;
+@import "../../Variables-scss/Variables.scss";
+
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 112px;
+  left: 0px;
+  padding: 0px 150px;
+  right: 0px;
+  margin-top: 94px;
+  background-color: #1a30db;
+  width: auto;
 }
 
+.social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.logo {
+  padding: 0px;
+  height: 90px;
+}
+
+@include media-up(lg) {
+  footer {
+    margin-top: 50px;
+    padding: 0px 16px;
+    height: 70px;
+  }
+  .social-media {
+    img {
+      height: 20px;
+    }
+  }
+
+  .logo {
+    height: 70px;
+  }
+}

@@ -1,25 +1,41 @@
-@import '../../Variables-scss/Variables.scss';
+@import "../../Variables-scss/Variables.scss";
+
+header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 0px 150px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  background-color: $azul-toroto;
+  z-index: 3;
+  width: 100vw;
+}
 
 .links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: $blanco-toroto;
-    font-family: $fontbody;
-    font-size: 14px;
-    font-style: normal;
-    line-height: 16px;
-    letter-spacing: 1.25px;
-    text-align: center;
-    
- ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: $blanco-toroto;
+  font-family: $fontbody;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 16px;
+  letter-spacing: 1.25px;
+  text-align: center;
+
+  ul {
     padding: 0px;
     margin-right: 20px;
     margin-left: 20px;
-}
+  }
 
- button{
+  button {
     position: static;
     width: 114px;
     height: 32px;
@@ -28,24 +44,46 @@
     border-radius: 10px;
     border-style: none;
     color: $negro_toroto;
-}
-}
-
-.App-logo{
-    left: 0.24%;
-    right: 0.21%;
-    top: 31.03%;
-    bottom: 30.62%;
-    margin-right: 300px; 
+  }
 }
 
-.meta{
-   display: flex;
-   align-items: center;
 
-   img{
-      height: 15px;
-      width: 15px;
-      filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(16deg) brightness(100%) contrast(104%);
-   }
+
+.menu {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(16deg) brightness(100%)
+    contrast(104%);
+  display: none;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 15px;
+    width: 15px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(16deg)
+      brightness(100%) contrast(104%);
+  }
+}
+
+@include media-up(lg) {
+  .menu {
+    display: block;
+  }
+  .App-logo{
+    margin: auto;
+  }
+  .navbar{
+    display: flex;
+   margin: auto;  
+ }
+ .links {
+   display: none;
+ }
+ header {
+  display: block;
+   padding: 0 20px;
+   justify-content: flex-start;
+}
 }

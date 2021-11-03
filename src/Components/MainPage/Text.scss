@@ -6,7 +6,7 @@
   top: 232px;
   left: 80px;
 
-    .weAre {
+  .weAre {
     width: 336px;
     height: 168px;
     left: 0px;
@@ -17,9 +17,9 @@
     font-weight: normal;
     font-size: 48px;
     line-height: 56px;
-    }
+  }
 
-    .lorem {
+  .lorem {
     width: 336px;
     height: 120px;
     margin-top: 16px;
@@ -30,9 +30,9 @@
     line-height: 24px;
     letter-spacing: 0.15px;
     color: #333333;
-    }
+  }
 
-    .propose {
+  .propose {
     text-align: center;
     width: 336px;
     height: 48px;
@@ -47,7 +47,7 @@
     line-height: 16px;
     letter-spacing: 1.25px;
     border: none;
-    }
+  }
 }
 
 .go-down {
@@ -69,7 +69,43 @@
   text-align: center;
   color: #333333;
 }
-.arrow-down{
+.arrow-down {
   background: none;
   border: none;
+}
+@include media-up(lg) {
+  .text {
+    display: flex;
+    margin-top: 60px;
+    left: 0;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+
+    .weAre {
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      height: auto;
+      margin-top: 35px;
+    }
+    .lorem {
+      font-size: 12px;
+      line-height: 14px;
+      height: auto;
+    }
+    .propose{
+      margin-top: 16px;
+    }
+  }
+  .go-down {
+    position: initial;
+    margin-top: 210px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
 }
