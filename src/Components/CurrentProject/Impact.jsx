@@ -6,7 +6,7 @@ function Impacts(props) {
   return (
     <div className='impact-info'>
         <p className='imp-value'>{props.value}</p>
-        <p className='imp-name'>{props.name}</p>
+        <h3 className='imp-name'>{props.name}</h3>
     </div>
   );
 }

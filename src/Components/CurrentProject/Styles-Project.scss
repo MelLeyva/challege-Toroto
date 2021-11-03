@@ -376,6 +376,7 @@
     text-align: center;
     align-items: center;
     gap: 80px;
+    justify-content: center;
 
     .imp-value {
       font-family: $fontbody;
@@ -419,7 +420,6 @@
   }
 
   .btn-propose {
-    
     text-align: center;
     width: 100%;
     height: 48px;
@@ -434,5 +434,171 @@
     line-height: 16px;
     letter-spacing: 1.25px;
     border: none;
+  }
+}
+
+@include media-up(lg) {
+  .conteiner {
+    padding: 0;
+    width: 100%;
+  }
+  .grid {
+    grid-template-columns: 100%;
+    gap: 0;
+  }
+  .resume {
+    grid-row: 2;
+    border-radius: 20px;
+    background-color: white;
+    padding: 40px 16px 24px;
+
+    .loc-project {
+      @include subTittleMovil();
+    }
+
+    .name-project {
+      @include tittleMovil();
+    }
+
+    .descrip-project {
+      font-size: 12px;
+      line-height: 14px;
+      height: auto;
+    }
+    .services-project {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+    .service {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+  .project-image {
+    width: 100%;
+    z-index: -1;
+    height: 265px;
+
+    .picture {
+      height: 290px;
+      border-radius: 0;
+    }
+  }
+  .problem-project {
+    margin: 0 16px;
+
+    h2 {
+      @include subTittleMovil();
+    }
+
+    p {
+      @include subTittleMovil();
+    }
+  }
+
+  .implement {
+    margin-top: 40px;
+    padding: 0 16px;
+
+    .implement-title {
+      @include tittleMovil();
+    }
+  }
+
+  .title-act {
+    margin-top: 24px;
+    padding: 0 16px;
+    @include subTittleMovil();
+  }
+
+  .activities {
+    margin-top: 16px;
+  }
+
+  .name-activity {
+    .title {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+  .descrip {
+    @include subTittleMovil();
+    margin-bottom: 24px;
+    margin-top: 0;
+  }
+
+  .works {
+    padding: 0 16px;
+    width: 100%;
+    height: 272px;
+    margin-bottom: 32px;
+    margin-top: 40px;
+
+    h2 {
+      @include subTittleMovil();
+      margin-top: 0;
+    }
+
+    div {
+      margin-top: 16px;
+      margin-bottom: 24px;
+      width: auto;
+      height: 240px;
+      background-color: wheat;
+    }
+  }
+  .galery {
+    @include subTittleMovil();
+    margin: 0 16px;
+  }
+  .grid-photos {
+    grid-template-rows: 88px 88px;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .img-project {
+    border-radius: 10px;
+  }
+  .impacts {
+    @include tittleMovil();
+    margin: 48px 16px 0;
+
+    .imp-name {
+      font-size: 12px;
+      line-height: 14px;
+      width: 160px;
+      height: 56px;
+      justify-content: center;
+      border-radius: 10px;
+    }
+    .impact {
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+
+      .imp-value {
+        font-size: 45px;
+        line-height: 50px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .text2{
+    margin: 0;
+    text-align: center;
+    padding: 16px;
+
+  .weAre2{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+  .lorem2{
+    @include subTittleMovil();
+  }
+  .btn-propose{
+    margin-top: 0;
+  }
   }
 }
