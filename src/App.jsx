@@ -22,6 +22,7 @@ function App() {
             </Route>
             <Route path="/" exact> 
               <Text />
+              <div className='cover-initial'></div>
               <GoDown />
               <Mapp />
               <GetData />

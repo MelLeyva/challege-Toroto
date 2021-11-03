@@ -1,12 +1,5 @@
 @import "../../Variables-scss/Variables.scss";
 
-/* .map-box{
-  display: flex;
-  height: 748px;
-  width: 80vw;
-  background-color: violet;
-} */
-
 .map-container {
   /* position: relative; */
   height: 748px;
@@ -69,4 +62,12 @@
   height: 127px;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
+}
+
+@include media-up(lg) {
+
+  .map-container{
+    display: none
+  }
+
 }

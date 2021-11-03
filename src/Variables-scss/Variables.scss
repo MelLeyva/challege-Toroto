@@ -1,4 +1,4 @@
-//fonts
+@use "sass:map";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 //fonts
@@ -10,6 +10,18 @@ $blanco-toroto:  rgba(255, 255, 255, 1);
 $negro_toroto: rgba(55, 55, 55, 1);
 $gris_1: rgba(51, 51, 51, 1);
 $gris_5: rgba(242, 242, 242, 1);
+
+$breakpoints: (
+  sm: 540px,
+  md: 726px,
+  lg: 500px,
+);
+
+@mixin media-up($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
 //tag
 @mixin tag {
     padding: 2px 10px;
