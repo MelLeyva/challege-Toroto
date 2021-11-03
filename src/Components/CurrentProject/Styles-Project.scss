@@ -1,0 +1,438 @@
+@import "../../Variables-scss/Variables.scss";
+
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 38px 180px 63px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  gap: 20px;
+}
+.resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  word-wrap: break-word;
+
+  .loc-project {
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    color: $gris_1;
+  }
+  .name-project {
+    @include tittle();
+    height: auto;
+    overflow: hidden;
+    margin-top: 4px;
+  }
+
+  .services-project {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  .service {
+    @include tag();
+  }
+  .descrip-project {
+    height: 120px;
+    margin-top: 32px;
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: #6f6f6f;
+    text-align: initial;
+  }
+}
+
+.project-image {
+  height: 480px;
+  left: 528px;
+  .picture {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+}
+
+.problem-project {
+  margin-top: 84px;
+
+  h2 {
+    @include subTittle();
+  }
+
+  p {
+    margin-top: 32px;
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: $gris_1;
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.459);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.implement {
+  display: flex;
+  margin-top: 109px;
+  gap: 40px;
+  width: 100%;
+
+  .implement-title {
+    @include tittle();
+  }
+
+  .tool {
+    background: none;
+    border: none;
+  }
+}
+.modal.is-open {
+  display: flex;
+}
+
+.modal-activity {
+  display: flex;
+  gap: 24px;
+  flex-direction: row;
+
+  .modal-tag {
+    height: 38px;
+    width: 24px;
+  }
+
+  h1 {
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 36px;
+    color: $negro_toroto;
+  }
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 1084px;
+  min-height: 670px;
+  background-color: $blanco-toroto;
+  text-align: justify;
+  border-radius: 30px;
+
+  p {
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: $gris_1;
+    margin-top: 26px;
+  }
+
+  h2 {
+    margin-top: 26px;
+    margin-bottom: 16px;
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: $gris_1;
+  }
+
+  li {
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: $gris_1;
+    margin-top: 4px;
+  }
+  .buttons {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 24px;
+    height: 48px;
+  }
+  .propose-project {
+    background-color: $negro_toroto;
+    border-radius: 5px;
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: $blanco-toroto;
+    text-align: center;
+    letter-spacing: 1.25px;
+    border: none;
+  }
+  .see-projects {
+    background: none;
+    border: none;
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: $gris_1;
+  }
+}
+.header-modal {
+  background-image: url("../../img/img_modal_actvidad.png");
+  background-position: center;
+  object-fit: cover;
+  height: 166px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(16deg) brightness(100%)
+    contrast(104%);
+}
+.activitiy-modal {
+  display: flex;
+  flex-direction: column;
+  margin: 34px 104px;
+}
+.title-act {
+  margin-top: 64px;
+  width: 100%;
+  @include subTittle();
+}
+.activities {
+  margin-top: 32px;
+}
+.name-activity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .title {
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 100%;
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $gris_1;
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top-color: #6f6f6f;
+    text-align: initial;
+  }
+  .arrow {
+    height: 15px;
+    transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+  }
+
+  .rotate {
+    transform: rotate(180deg);
+    transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+  }
+}
+.descrip {
+  margin-top: 6px;
+  margin-bottom: 32px;
+  font-family: $fontbody;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: $gris_1;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+.show {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+.works {
+  h2 {
+    margin-top: 32px;
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.18px;
+    color: $gris_1;
+  }
+
+  div {
+    margin-top: 32px;
+    margin-bottom: 64px;
+    width: 1040px;
+    height: 480px;
+    overflow: scroll;
+    border-radius: 20px;
+  }
+}
+
+.galery {
+  @include subTittle();
+}
+.grid-photos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 288px 288px;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.img-project {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.images:nth-child(1) {
+  grid-column-start: span 2;
+}
+
+.images:nth-child(6) {
+  grid-column-start: span 2;
+}
+
+.impacts {
+  margin-top: 109px;
+  @include tittle();
+
+  .imp-name {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    top: -30px;
+    width: 200px;
+    height: 117px;
+    padding-bottom: 24px;
+    @include subTittle();
+    background-color: $gris_5;
+    z-index: -1;
+  }
+
+  .impact {
+    display: flex;
+    margin-top: 70px;
+    text-align: center;
+    align-items: center;
+    gap: 80px;
+
+    .imp-value {
+      font-family: $fontbody;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 72px;
+      line-height: 72px;
+      text-align: center;
+      letter-spacing: -0.5px;
+      color: $azul-toroto;
+    }
+  }
+}
+
+.text2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 109px;
+  gap: 24px 40px;
+
+  .weAre2 {
+    width: 100%;
+    text-align: center;
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 36px;
+    color: $gris_1;
+  }
+
+  .lorem2 {
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: $gris_1;
+  }
+
+  .btn-propose {
+    
+    text-align: center;
+    width: 100%;
+    height: 48px;
+    margin-top: 32px;
+    background: $negro_toroto;
+    border-radius: 5px;
+    color: $blanco-toroto;
+    font-family: $fontbody;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    border: none;
+  }
+}

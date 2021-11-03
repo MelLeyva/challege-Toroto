@@ -1,37 +1,72 @@
-@import '../../Variables-scss/Variables.scss';
+@import "../../Variables-scss/Variables.scss";
 
+/* .map-box{
+  display: flex;
+  height: 748px;
+  width: 80vw;
+  background-color: violet;
+} */
 
 .map-container {
-    /* position: absolute; */
-    height: 748px;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    z-index: 1;
-    width: 100vw;
+  /* position: relative; */
+  height: 748px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  z-index: 1;
+  width: auto;
 }
 
-.custom-marker{
-    height: 36px;
-    width: 36px;
+.custom-marker {
+  height: 36px;
+  width: 36px;
 }
 
-.popup .mapboxgl-popup-content{
-    border-radius: 20px;
-    
-    img{
-        width: 423px;
-        height: 127px;
-        object-fit: cover;
-        left: 0px;
-        top: 0px;
-        border-radius: 20px 20px 0px 0px;
-    }
-    
-    p{
-        font-size: 14px;
-    }
-    h1{
-        font-family: $fontbody;
-    }
+.popup .mapboxgl-popup-content {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 0px;
+  width: 423px;
+  height: auto;
+}
+
+.popup-loc {
+  margin: 24px 32px 0 32px;
+  height: auto;
+  font-size: 14px;
+  font-family: $fontbody;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #333333;
+}
+.popup-name {
+  margin: 4px 32px 0 32px;
+  height: 48px;
+  font-family: $fontbody;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.18px;
+  color: #333333;
+  overflow: hidden;
+  white-space: pre-line;
+}
+.popup-problem {
+  margin: 16px 32px 32px 32px;
+  font-family: $fontbody;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+.photo-id {
+  width: 100%;
+  height: 127px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
 }

@@ -3,34 +3,40 @@
  .App{
     padding-top: 40px;
 
- }
- header{
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 56px;
-    padding: 0px 150px;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    background-color: $azul-toroto;
-    z-index: 2;
-    width: 100vw;
-    
- }
- footer{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 112px;
-    left: 0px;
-    padding: 0px 150px;
-    right: 0px;
-    margin-top: 94px;
-    background-color: #1a30db;
-    width: 100vw;
- }
+   header{
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+      padding: 0px 150px;
+      left: 0px;
+      right: 0px;
+      top: 0px;
+      background-color: $azul-toroto;
+      z-index: 3;
+      width: 100vw; 
+   }
+   
+   footer{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      height: 112px;
+      left: 0px;
+      padding: 0px 150px;
+      right: 0px;
+      margin-top: 94px;
+      background-color: #1a30db;
+      width: auto;
+   }
+}
+ 
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}

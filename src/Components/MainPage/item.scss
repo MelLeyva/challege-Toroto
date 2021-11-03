@@ -19,106 +19,105 @@
     justify-content: center;
     margin-top: 32px;
 
-    .cards{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 512px;
-        height: 544px;
-        margin: 0 16px 16px 16px;
-        border-radius: 20px;
-        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
-
-        .photo{
-            width: 100%;
-            height: 172px;
-            object-fit: cover;
-            left: 0px;
-            top: 0px;
-            border-radius: 20px 20px 0px 0px;
-            flex: none;
-            margin-bottom: 24px;
-        }
-        .location{
-            height: 24px;
-            margin: 0px 32px;
-            font-family: $fontbody;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 24px;
-            letter-spacing: 0.15px;
-            color: $negro_toroto;
-            overflow:hidden;
-            white-space: pre-line;
-        }
-        .name{
-            margin: 8px 32px;
-            height: 72px;
-            font-family: $fontbody;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 34px;
-            line-height: 36px;
-            color: $negro_toroto;
-            overflow:hidden;
-            white-space: pre-line;
-        }
-        .description{
-            height: 60px;
-            font-family: $fontbody;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
-            line-height: 20px;
-            letter-spacing: 0.25px;
-            color: $negro_toroto;
-            margin: 8px 32px;
-            letter-spacing: 0.25px;
-            overflow:hidden;
-            white-space: pre-line;
-        }
-        
-        .view-project{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            width: 448px;
-            height: 48px;
-            padding: 16px 24px;
-            margin: 32px;
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 16px;
-            color: $negro_toroto;
-            background: none;
-            border: 1px solid $negro_toroto;
-            box-sizing: border-box;
-            border-radius: 5px;
-        }
-        .services{
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            padding: 0px;
-            margin: 16px 32px 0px;
-        
-            li{
-                @include tag()
-            }
-
-            img{
-               margin: 5px;
-            }
-        
-        }
-        
-        button{ 
-            @include button-project()
-        }
     
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 512px;
+    height: 544px;
+    margin: 0 16px 16px 16px;
+    border-radius: 20px;
+    box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+    
+    .photo-id{
+        width: 100%;
+        height: 172px;
+        object-fit: cover;
+        left: 0px;
+        top: 0px;
+        border-radius: 20px 20px 0px 0px;
+        flex: none;
+        margin-bottom: 24px;
     }
+    .loc-card{
+        height: 24px;
+        margin: 0px 32px;
+        font-family: $fontbody;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        color: $negro_toroto;
+        overflow:hidden;
+        white-space: pre-line;
+    }
+    .name-card{
+        margin: 8px 32px;
+        height: 72px;
+        font-family: $fontbody;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 34px;
+        line-height: 36px;
+        color: $negro_toroto;
+        overflow:hidden;
+        white-space: pre-line;
+    }
+    .descrip-card{
+        height: 60px;
+        font-family: $fontbody;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+        color: $negro_toroto;
+        margin: 8px 32px;
+        letter-spacing: 0.25px;
+        overflow:hidden;
+        white-space: pre-line;
+    }
+    
+    .view-project{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 448px;
+        height: 48px;
+        padding: 16px 24px;
+        margin: 32px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: $negro_toroto;
+        background: none;
+        border: 1px solid $negro_toroto;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+    .service-card{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+        margin: 16px 32px 0px;
+    
+        li{
+            @include tag()
+        }
+       
+    }
+    
+    button{ 
+        @include button-project()
+    }
+     a{
+        text-decoration:none;
+     }
 }

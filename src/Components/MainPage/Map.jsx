@@ -21,7 +21,7 @@ function Mapp() {
       className: "popup",
       maxWidth: "423px",
       maxHeight: "355px",
-      anchor: "right",
+      anchor: "center",
     })
   );
   const map = useRef(null);
@@ -141,6 +141,8 @@ function Mapp() {
         if (error) throw error;
         map.current.addImage("custom-marker", image);
       });
+ 
+
       map.current.addLayer({
         id: "point",
         type: "symbol",
@@ -148,11 +150,10 @@ function Mapp() {
         layout: {
           "icon-image": "custom-marker",
         },
-        
       });
 
    
-      map.current.on("click", (e) => {
+      map.current.on("mouseover", "point", (e) => {
         map.current.getCanvas().style.cursor = "";
         const features = map.current.queryRenderedFeatures(e.point, {
           layers: ["point"],
@@ -192,7 +193,7 @@ function Mapp() {
     });
   });
 
-  return <div ref={mapContainer} className="map-container"></div>;
+  return <div ref={mapContainer} className="map-container"></div>
 }
 
 export default Mapp;
