@@ -13,40 +13,48 @@ import { useModal } from "./UseModal.jsx";
 import "./Styles-Project.scss"
 import ProposeProject from "./ProposeProjects.jsx";
 
+function storage(id, valorInicial = []) {
+    const saveData = localStorage.getItem(id);
+    return saveData ? JSON.parse(saveData) : valorInicial;
+}
 
 const Project = () => {
   const { id } = useParams();
-
-  let [proyecto, setProyecto] = useState(storage('proyecto', []))
-  useEffect(() => {
-    localStorage.setItem('proyecto', JSON.stringify(proyecto));
-  }, [proyecto]);
-
-  function storage(proyecto, valorInicial) {
-    if (typeof window !== 'undefined') {
-      const saveData = localStorage.getItem(proyecto);
-      const inicial = saveData !== null ? JSON.parse(saveData) : valorInicial;
-      return inicial;
-    }
-    return 'error'
-  }
+  
+  const [isOpenModal1, openModal1, closeModal1] = useModal(false);
+  let [proyecto, setProyecto] = useState(() => storage('proyecto'))
 
   useEffect(() => {
-    let getApi = async () => {
-      let urlId = `https://fieldops-api.toroto.mx/api/projects/${id}`;
-      let projectData = await fetch(urlId)
-      let data = await projectData.json()
-      //console.log(data.data)
+    const getApi = async () => {
+      const urlId = `https://fieldops-api.toroto.mx/api/projects/${id}`;
+      const projectData = await fetch(urlId)
+      const data = await projectData.json()
       setProyecto(data.data)
     };
     getApi()
   }, [id])
 
+  useEffect(() => {
+    console.log('proyect from server', proyecto)
+    localStorage.setItem('proyecto', JSON.stringify(proyecto));
+  }, [proyecto]);
+ 
+
   //console.log(proyecto[0].activities)
-  const [isOpenModal1, openModal1, closeModal1] = useModal(false);
   /* const [selected, setselected] = Acordeon(null) */
 
   //const [isOpenModal2, openModal2, closeModal2] = useModal(false);
+
+  if (proyecto.length === 0) {
+    return (
+      <div className='conteiner'>
+        <div className='grid'>
+          <div>Loading ...</div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className='conteiner'>
       <div className='grid'>
